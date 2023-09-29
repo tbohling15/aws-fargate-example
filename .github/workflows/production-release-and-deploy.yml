@@ -27,7 +27,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-region: ap-northeast-1
+          aws-region: us-east-2
           role-to-assume: ${{ secrets.AWS_FEDARATED_ROLE }}
           role-session-name: aws-fargate-example
 
