@@ -9,7 +9,7 @@ do
 	STAGE=$i
 	REGION="ap-northeast-1"
 	if [ "$STAGE" = "develop" ];then
-		REGION="ap-southeast-1"
+		REGION="us-east-2"
 	fi
 	echo "Deploying deploy-bucket.yml to $STAGE in $REGION ..."
 	if [ "$DELETE" = "remove" ];then

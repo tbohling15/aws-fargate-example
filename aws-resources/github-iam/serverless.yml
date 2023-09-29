@@ -2,11 +2,11 @@ service: aws-fargate-example-github-iam
 
 provider:
   name: aws
-  region: ${opt:region, 'ap-southeast-1'}
+  region: ${opt:region, 'us-east-2'}
   stage: ${opt:stage, 'develop'}
   stackName: ${self:service}
   deploymentBucket:
-    name: com.jessica.${self:provider.stage}-deploy-bucket
+    name: com.todd.${self:provider.stage}-deploy-bucket
     serverSideEncryption: AES256
 resources:
   Resources:
@@ -63,7 +63,7 @@ resources:
                   - !Ref GithubOidc
               Condition:
                 StringLike:
-                  token.actions.githubusercontent.com:sub: repo:JessicaWin/aws-fargate-example:*
+                  token.actions.githubusercontent.com:sub: repo:toddWin/aws-fargate-example:*
         ManagedPolicyArns:
           - !Ref GithubECSPolicy
     GithubOidc:

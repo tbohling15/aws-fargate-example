@@ -2,11 +2,11 @@ service: aws-fargate-example-ecr
 
 provider:
   name: aws
-  region: ${opt:region, 'ap-southeast-1'}
+  region: ${opt:region, 'us-east-2'}
   stage: ${opt:stage, 'develop'}
   stackName: ${self:provider.stage}-${self:service}
   deploymentBucket:
-    name: com.jessica.${self:provider.stage}-deploy-bucket
+    name: com.todd.${self:provider.stage}-deploy-bucket
     serverSideEncryption: AES256
 resources:
   Resources:

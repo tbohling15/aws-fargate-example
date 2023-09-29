@@ -7,9 +7,9 @@ STAGE_LIST=( develop )
 for i in "${STAGE_LIST[@]}"
 do
     STAGE=$i
-    REGION="ap-northeast-1"
+    REGION="us-east-2"
     if [ "$STAGE" = "develop" ];then
-        REGION="ap-southeast-1"
+        REGION="us-east-2"
     fi
     echo "Deploying $RESOURCE_FOLDER to $STAGE in $REGION ..."
     if [ "$DELETE" = "remove" ];then

@@ -89,7 +89,7 @@ cd ../
 ```bash
 # replace ${AWS_AccountId} with your own aws accountId 
 # Retrieve an authentication token and authenticate your Docker client to your registry.
-$ aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin ${AWS_AccountId}.dkr.ecr.ap-southeast-1.amazonaws.com
+$ aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin ${AWS_AccountId}.dkr.ecr.ap-southeast-1.amazonaws.com
  
 # Build your Docker image using the following command. 
 $ docker-compose build dev
@@ -195,8 +195,8 @@ bucket used to save cloudformation template
 
 ## Manage AWS Resources
 
-- develop stage will deploy to ap-aoutheast-1 region
-- production stage will deploy to ap-northeast-1 region
+- develop stage will deploy to us-east-2 region
+- production stage will deploy to us-east-2 region
 
 ### deploy one resource folder
 

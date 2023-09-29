@@ -10,7 +10,7 @@ Resources:
   DeploymentBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub com.jessica.${Stage}-deploy-bucket
+      BucketName: !Sub com.todd.${Stage}-deploy-bucket
       CorsConfiguration:
         CorsRules:
           - AllowedHeaders: ['*']
